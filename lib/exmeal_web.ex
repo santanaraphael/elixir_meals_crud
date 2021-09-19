@@ -63,8 +63,6 @@ defmodule ExmealWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import ExmealWeb.ErrorHelpers
-      import ExmealWeb.Gettext
       alias ExmealWeb.Router.Helpers, as: Routes
     end
   end
