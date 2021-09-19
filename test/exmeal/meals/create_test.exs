@@ -13,16 +13,17 @@ defmodule Exmeal.Meals.CreateTest do
 
       assert {:ok,
               %Exmeal.Meal{
-                calories: 20,
+                calories: 20.0,
                 date: ~D[2001-05-02],
                 description: "Banana",
                 id: _id
               }} = response
     end
+
     test "when there are invalid params, returns an error" do
       params = %{
         calories: 20,
-        date: ~D[2001-05-02],
+        consumed_at: ~D[2001-05-02]
       }
 
       response = Exmeal.create_meal(params)
