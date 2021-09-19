@@ -8,7 +8,6 @@ defmodule Exmeal.Meals.Create do
          {:ok, %Meal{}} = meal <- Repo.insert(changeset) do
       meal
     else
-      {:error, %Error{}} = error -> error
       {:error, result} -> {:error, Error.build(:bad_request, result)}
     end
   end
